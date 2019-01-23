@@ -1,0 +1,22 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "grocerheader.html" %}
+<section class="main_content">
+	<h3 class="header_maincontent">Change Category Name</h3>
+	<div class="div_change">
+		<form action="#" method = 'POST'>
+			<div class='form_name'>
+				<label for="name">
+					Name
+				</label>
+				<input class="input_name" id="name" type="text" required="required" maxlength="30" name="Category_Name" placeholder="{{edited_category.name}}">
+			</div>
+			<div class="change_item">
+				<button class="button_submit" type="submit">Submit</button>
+				<a class="links_editcancel" href = '{{url_for('showCategoryFood', category_id=category_id)}}'>Cancel
+				</a>		
+			</div>
+		</form>
+	</div>
+</section>
+{% endblock %}

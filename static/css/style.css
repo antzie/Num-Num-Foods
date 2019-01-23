@@ -1,0 +1,265 @@
+/************************************/
+/*Main CSS Styling*/
+body {
+  font-family: 'Alegreya Sans SC', sans-serif;
+  font-weight: 400;
+  background-color: #ffffff;
+  margin:0 auto; 
+  max-width: 1200px;
+  padding: 0 2%;
+  display: block;
+  height: 100%;
+}
+
+h3 {
+  font-size: 1.5em;
+  font-weight: normal;
+  background-color: #21520d;
+  color: #ffffff;
+
+  padding: 2%;
+  margin: 0;
+}
+
+h4 {
+  font-size: 1.3em;
+  margin: 0;
+}
+
+
+a {
+  text-decoration: none;
+}
+
+p {
+  font-size: 1.3em;
+  padding: 2% 0 2% 4%;
+  }
+
+
+/************************************/
+/*Main Header Styling */
+
+.header_top {
+	position: relative;
+	text-align: center;
+	color: white;
+	margin-bottom: 0;
+}
+.header_inner {
+  background-color: #1a0805;
+  background-image: url(chocolate-cake-with-berry-header.jpg);  /*Relative path*/
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  overflow: hidden;
+	max-width: 1200px;
+  height: 150px;
+}
+
+.top-left-title {
+	position: absolute;
+	top: 15%;
+	left: 5%;
+	text-align: left;
+}
+
+.top-right-login {
+  position: absolute;
+  bottom: 40%;
+  right: 5%;
+  text-align: right;
+  text-decoration: underline;
+}
+
+.top-left-title h1 {
+  margin: 0;
+  font-size: 3em;
+}
+
+.top-left-title h2, .top-right-login a {
+  margin: 0;
+  font-weight: bold;
+  font-size: 1.5em;
+  font-style: oblique;
+  color: inherit;
+}
+
+/*********/
+/* Main Top Navbar Styling */
+
+.nav_top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  background-color: #0c0100; /*Black*/
+  border-bottom: 2px solid #fcfdf5; /*White*/ 
+  border-top: 2px solid #fcfdf5; /*White*/  
+}
+
+.nav_top a {
+  display: inline-flex;
+  min-width: 48px;
+  color: #fcfdf5; /*White*/
+  font-size: 1.5em;
+}
+
+/*********/
+/*Flash Messages */
+
+.flash {
+  color: black;
+}
+
+/****************************************/
+/*Main Content*/
+
+/*Main Page */
+.header_maincontent {
+  border-bottom: 2px solid  #fcfdf5; /*White*/
+}
+
+.section_change {
+  border: 1px outset #21520d; /*Dark Green?*/
+  background-color: #fcfdf5; /*White*/
+  margin-bottom: 2px;
+
+}
+
+.section_category_list button {
+  border-bottom: 1px dotted #fcfdf5; /*White*/
+}
+
+
+
+/*********/
+/*Subsidiary Pages*/
+
+.section_food_list {
+  background-color: #daffcb38; /*Very, very pale green*/
+  border: 2px solid #0000000d; /*Very pale grey*/
+}
+
+.food {
+  border-bottom: 2px solid #21520d; /*Dark Green?*/
+  margin: 5px;
+  padding-bottom: 3px;
+}
+
+.food_item h4 {
+  font-size: 1.5em;
+}
+
+.food_item p {
+  font-size: 1.3em;
+
+}
+
+.food_item h4, .food_item p {
+  padding: 2% 0 2% 4%;
+  margin: 0;
+}
+
+/********/ 
+/*Change Item*/
+
+.change_item {
+  border-top: 1px dotted  #225e89;
+  border-bottom: 1px dotted  #225e89;
+  display: flex;
+  justify-content: space-between;
+}
+
+/********/ 
+/* Log in Page*/
+
+#result {
+  text-align: center;
+}
+#result h3 {
+  background-color: #1a0805;
+}
+#result h4 {
+  padding: 2% 0;
+}
+
+/*****************************/
+/* Form Styling*/
+
+form {
+  padding: 2% 4%;
+}
+
+.input_name, .input_description, .input_price {
+    width: 100%;
+    padding: 12px 20px;
+    margin-bottom: 15px;
+
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+
+}
+
+.input_description {
+    min-height: 40px;
+}
+
+.input_price {
+  max-width: 20%;
+}
+
+
+/*****************************************/
+/* Button (i.e.) Links*/
+
+button {
+    display: inline-block;
+    background-color: inherit;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.5em;
+    cursor:pointer;
+    border: none;
+    min-width: 20%;
+    font-family: 'Alegreya Sans SC', sans-serif;
+    font-weight: 400;
+}
+
+button:hover {
+  background-color: #347718; /*Dark Green*/
+}
+
+/*********/
+/* Button for Categories Links on Main Page*/
+
+.button_change_category {
+  border-bottom: 1px dotted black;
+}
+
+.button_category {
+  display: block;
+  background-color: #4ba625; /*Green*/
+  color: #fff;
+}
+
+.button_category, .button_change_category {
+  width: 100%;
+  text-align: left;
+  padding: 2% 3%;
+  text-decoration: none;
+}
+
+.button_editdelete {
+  font-size: 1.3em;
+  min-width: 100px;
+  min-height: 48px;
+}
+
+#button_signin{
+    text-align: center;
+    padding: 2%;
+    border-bottom: 1px groove black;
+}

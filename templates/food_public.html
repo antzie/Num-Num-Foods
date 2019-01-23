@@ -1,0 +1,21 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "grocerheader.html" %}
+<section class="main_content">
+	<h3 class="header_maincontent">{{category.name}}</h3>
+		<h4 class="div_list">Category Creator: {{owner.name}}</h4>
+		<div class="div_list">
+			{% if food !=[] %}
+				{% for fooditem in food %}
+				<div class="food">
+					<div class="food_item">
+						<h5>{{fooditem.name}}</h5>
+						<p>{{fooditem.description}}</p>
+						<p><strong>{{fooditem.price}}</strong></p>
+					</div>	
+				</div>	
+				{% endfor %}
+			{% endif %}
+		</div>
+</section>
+{% endblock %}

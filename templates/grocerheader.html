@@ -1,0 +1,31 @@
+<header class="header_top">
+	<div class="header_inner">
+		<div class='top-left-title'>
+			<h1>Calla</h1>
+			<h2>Groceries...</h2>
+		</div>
+		<div class='top-right-login'>
+			{% if 'username' not in session %}
+				<a href="{{url_for('log_in')}}"> Log-in </a>
+			<!-- Hmmm need work around regarding access token not being deleted when user finishes sessions. Fine if user can log-in - but they need the link to be able to do that -->
+			{% else %}
+				<a href="{{url_for('gdisconnect')}}"> Disconnect </a>
+			{% endif %}		
+		</div>
+	</div>
+	<nav class="nav_top">
+		<a href="{{url_for('mainPage')}}">Home</a>
+		{% for other in other_categories %}
+			<a href='{{url_for('showCategoryFood', category_id=other.id)}}'>{{other.name}}</a>
+		{% endfor %}
+	</nav>
+	<div class ="flash" id="deletesuccess">
+		{% with messages = get_flashed_messages() %}
+			{% if messages %} 
+				{% for message in messages %}
+					<li> <strong> {{ message }} </strong> </li>
+				{% endfor %}
+	        {% endif %}
+    	{% endwith %}
+	</div>
+</header>

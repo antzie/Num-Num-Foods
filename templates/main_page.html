@@ -1,0 +1,46 @@
+<!-- added Disconnect/Log-In-->
+{% extends "main.html" %}
+{% block content %}
+<header class="header_top">
+	<div class="header_inner">
+		<div class='top-left-title'>
+			<h1>Calla</h1>
+			<h2>Groceries...</h2>
+		</div>
+		<div class='top-right-login'>
+			{% if 'username' not in session %}
+				<a href="{{url_for('log_in')}}"> Log-in </a>
+			<!-- Hmmm need work around regarding access token not being deleted when user finishes sessions. Fine if user can log-in - but they need the link to be able to do that -->
+			{% else %}
+				<a href="{{url_for('gdisconnect')}}"> Disconnect </a>
+			{% endif %}		
+		</div>
+	</div>
+	<nav class="nav_top">
+		<a href="{{url_for('about')}}"> About </a>
+	</nav>
+	<div class ="flash" id="deletesuccess">
+		{% with messages = get_flashed_messages() %}
+			{% if messages %} 
+				{% for message in messages %}
+					<ul>{{ message }}</ul>
+				{% endfor %}
+	        {% endif %}
+    	{% endwith %}
+	</div>
+</header>
+<section class="main_content">
+	<h3 class="header_maincontent">Food Categories</h3>
+	<div class="div_change">
+		<a class ="links" href="{{url_for('newCategory')}}" >
+				Create New Category</a>
+	</div>
+	<div class="div_category_list">
+		<div class="category_individual">
+		{% for category in categories %}
+			<a class="links links_category" href="{{url_for('showCategoryFood', category_id=category.id)}}">{{category.name}}</a>
+		{% endfor %}
+		</div>
+	</div>
+</section>
+{% endblock %}
