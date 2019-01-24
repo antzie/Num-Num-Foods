@@ -35,7 +35,7 @@ cd path/vagrant/catalog
 ```
 Clone github repository []()
 ```
-$ git clone https://github.com/antzie/   .git
+$ git clone https://github.com/antzie/catalog.git
 ```
 ## Run Application
 ### Launch VM
