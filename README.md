@@ -6,10 +6,14 @@ Part of Udacity's Full-Stack Nanodegree programme.
 Runs within Vagrant virtual environment.
 
 Calla Grocers is also hosted by Amazon Lightsail at [Calla Grocers](http://ec2-3-104-111-195.ap-southeast-2.compute.amazonaws.com). 
+
 ---
-URL
+
+Public IP: http://3.104.111.195/
 Amazon Domain: http://ec2-3-104-111-195.ap-southeast-2.compute.amazonaws.com
+
 ---
+
 ## Requirements.
 - Python 2.7
 - [Vagrant](https://www.vagrantup.com/)
