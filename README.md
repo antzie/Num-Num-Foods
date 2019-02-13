@@ -1,9 +1,11 @@
-# Item Catalogue Project
-A simple, fullstack website template for an imaginary business (Calla Grocers) that presents a list of food categories and items whithin each of those categories. Authorised users are allowed to create or edit categories and items that they own.
+# Calla Catalogue Project
+A simple, fullstack website template for an imaginary business (Calla Grocers) that presents a list of food categories and items whithin each of those categories. Authorised users are allowed to create or edit categories and items that they own. Users are authorised by a 3rd party - Google's 
 
 Part of Udacity's Full-Stack Nanodegree programme.
 
 Runs within Vagrant virtual environment.
+
+Calla Grocers is also hosted by Amazon Lightsail at [Calla Grocers](http://ec2-3-104-111-195.ap-southeast-2.compute.amazonaws.com). 
 ## Requirements.
 - Python 2.7
 - [Vagrant](https://www.vagrantup.com/)
@@ -33,9 +35,9 @@ Navigate to catalog folder of virtual machine
 ```
 cd path/vagrant/catalog
 ```
-Clone github repository []()
+Clone github repository [Calla Grocer catalogue](https://github.com/antzie/Calla-Grocer-Catalogue)
 ```
-$ git clone https://github.com/antzie/catalog.git
+$ git clone https://github.com/antzie/Calla-Grocer-Catalogue.git
 ```
 ## Run Application
 ### Launch VM
@@ -51,12 +53,23 @@ Navigate to shared folder
 ```
 cd /vagrant
 ```
+### Setup Database
+Run 
+```
+# python db_setup.py
+$ python db_populate.py
+```
 ### Run Project
+
 ```
 $ python project_catalogue.py
 ```
 ### Access Project
 [http://localhost:8000](http://localhost:8000/
 )
+## Issues
+Google login has problems in Firefox. Until this issue is resolved - please open Calla in Chrome. 
+
+
 ## License.
 See License MIT for details.
