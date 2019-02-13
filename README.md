@@ -1,5 +1,5 @@
 # Item Catalogue Project
-A simple website application that lists items within a variety of categories and allows users to create, update or delete items and/or categories.
+A simple, fullstack website template for an imaginary business (Calla Grocers) that presents a list of food categories and items whithin each of those categories. Authorised users are allowed to create or edit categories and items that they own.
 
 Part of Udacity's Full-Stack Nanodegree programme.
 
