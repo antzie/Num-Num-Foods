@@ -1,5 +1,5 @@
 # Calla Catalogue Project
-A simple, fullstack website template for an imaginary business (Calla Grocers) that presents a list of food categories and items whithin each of those categories. Authorised users are allowed to create or edit categories and items that they own. Users are authorised by a 3rd party - Google's 
+A simple, fullstack website template for an imaginary business (Calla Grocers) that presents a list of food categories and items whithin each of those categories. Authorised users are allowed to create or edit categories and items that they own. Users are authorised by a 3rd party - Google's Oauth2 Authentication System.
 
 Part of Udacity's Full-Stack Nanodegree programme.
 
