@@ -10,6 +10,7 @@ Calla Grocers is also hosted by Amazon Lightsail at [Calla Grocers](http://ec2-3
 ---
 
 Public IP: http://3.104.111.195/
+
 Amazon Domain: http://ec2-3-104-111-195.ap-southeast-2.compute.amazonaws.com
 
 ---
