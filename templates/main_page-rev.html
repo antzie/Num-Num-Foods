@@ -40,11 +40,9 @@
 					<h2>Catalogue</h2>
 				</div>
 				<ul class="content-side-list">
-					<li>Coffee</li>
-					<li>Tea</li>
-					<li>Chocolate</li>
-					<li>Fruit</li>
-					<li>Vegetables</li>
+					{% for category in categories %}
+						<li><a class="links links_category" href="{{url_for('showCategoryFood', category_id=category.id)}}">{{category.name}}</a></li>
+					{% endfor %}
 				</ul>
 			</div>
 			<div class="content-main-container">
