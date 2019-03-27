@@ -86,7 +86,7 @@ img {
 	width: 100%; 
 	/*max-height: 200px;*/
 }
-
+/*
 .heading-category {
 	width: 100%;
 	height: auto;
@@ -95,19 +95,21 @@ img {
 	color: #ffffff;
 	text-align: center;
 }
-
+*/
 .section-welcome {
 	/*background-color: rgba(243, 255, 239, 0.41);*/
 	border-bottom: 2px solid #21520d;
 	text-align: center;
 }
 
-.section-welcome h2 {
+.heading-non-coloured {
 	border-top: 3px solid #21520d;
     border-bottom: 2px solid #21520d;
     padding: 15px 2px;
     font-weight: 600;
     color: #21520d;
+    background-color: inherit;
+    text-align:center;
 }
 
 .section-welcome p {

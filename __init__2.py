@@ -228,6 +228,14 @@ def foodItemJSON(category_id, food_id):
     return jsonify(foodItem=foodItem.serialize)
 
 
+
+
+
+
+
+
+
+
 #############################################################
 
 # Website Framework and Endpoints
@@ -361,9 +369,6 @@ def deleteCategory(category_id):
         other_categories=other_categories)
 
 
-#######################
-# FoodItems Section
-
 # Show Food for a specific category
 
 @app.route('/category/<int:category_id>/')
@@ -371,21 +376,22 @@ def deleteCategory(category_id):
 def showCategoryFood(category_id):
     '''Shows list of Food in a category.
     '''
-
+    categories = session.query(FoodCategory).order_by('name').all() #Required for the side-menu
     category = session.query(FoodCategory).filter_by(id=category_id).one()
     other_categories = session.query(FoodCategory).filter(
         FoodCategory.id != category_id).all()
-    food = session.query(FoodItem).filter_by(foodcategory_id=category_id).all()
+    food = session.query(FoodItem).filter_by(foodcategory_id=category_id).all()  
     # Owner of Category
     owner = getUserInfo(category.user_id)
 
     # Authorisation Check:
     # Check user is logged in and is owner of category
     if 'username' not in login_session or owner.id != login_session['user_id']:
-        return render_template('food_public.html',
+        return render_template('category_public-rev.html',
                                category=category,
                                category_id=category_id,
                                food=food,
+                               categories=categories,
                                other_categories=other_categories,
                                owner=owner)
 
@@ -396,6 +402,9 @@ def showCategoryFood(category_id):
                            other_categories=other_categories,
                            owner=owner)
 
+
+#######################
+# FoodItems Section
 
 # New Food
 
