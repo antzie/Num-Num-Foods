@@ -9,6 +9,7 @@
 p {
 	font-family: 'Lato', sans-serif;
 }
+
 header {
 	width: 100%;
 	min-height: 50px;
@@ -65,6 +66,7 @@ header {
 	display: flex;
 	justify-content: space-between;
 	margin-top: 10px;
+	min-height: 500px;
 }
 
 .content-main-container{
@@ -74,6 +76,10 @@ header {
 .content-main {
 	margin: 0 10px 10px 10px;
 	display: inline-block;
+	background-color: rgba(243, 255, 239, 0.41);
+	height: fill-available;          /* WebKit-based browsers will ignore this. */
+    height: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
+    height: fill-available
 }
 
 img {
@@ -90,7 +96,27 @@ img {
 	text-align: center;
 }
 
-.description-lists {
+.section-welcome {
+	/*background-color: rgba(243, 255, 239, 0.41);*/
+	border-bottom: 2px solid #21520d;
+	text-align: center;
+}
+
+.section-welcome h2 {
+	border-top: 3px solid #21520d;
+    border-bottom: 2px solid #21520d;
+    padding: 15px 2px;
+    font-weight: 600;
+    color: #21520d;
+}
+
+.section-welcome p {
+	font-family: 'Merriweather', serif;
+	padding: 10px 2px;
+	line-height: 1.3em;
+}
+
+/*.description-lists {
 	background-color: rgba(243, 255, 239, 0.41);
 	border: 2px solid rgb(200, 255, 181);
 }
@@ -114,7 +140,7 @@ img {
 .description-item p {
 	font-size: 1em;
 }
-
+*/
 
 /* Side Bar (content-side) Styling */
 .content-side {
@@ -168,6 +194,9 @@ footer p {
 @media only screen and (max-width: 510px) {
 	.nav-anchor {
 		display: none;
+	}
+	.content {
+		min-height: 300px;
 	}
 }
 @media only screen and (min-width: 511px) {
