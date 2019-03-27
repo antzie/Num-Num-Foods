@@ -1,0 +1,10 @@
+<div class="content-side" id="menu-side">
+	<div class="content-side-title">
+		<h2>Catalogue</h2>
+	</div>
+	<ul class="content-side-list">
+		{% for category in categories %}
+			<li><a class="links links_category" href="{{url_for('showCategoryFood', category_id=category.id)}}">{{category.name}}</a></li>
+		{% endfor %}
+	</ul>
+</div>

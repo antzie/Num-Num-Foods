@@ -1,0 +1,22 @@
+		<header>
+			<div class="header-title">
+				<h1>Calla Grocery</h1>
+			</div>
+			<div class="header-nav">
+				<a class="nav-anchor" href="{{url_for('mainPage')}}">Home</a>
+				<a class="nav-anchor" href="{{url_for('about')}}">About</a>
+				{% if 'username' not in session %}
+					<a class="nav-anchor" href="{{url_for('log_in')}}">Log-in</a>
+				{% else %}
+					<a href="{{url_for('gdisconnect')}}"> Disconnect </a>
+				{% endif %}						
+				<a href="#">
+					<i class="fa fa-bars" onclick="toggleSideMenu()"></i>
+				</a>
+			</div>
+		</header>
+		<nav class="nav-responsive">
+			<a href="#">Home</a>
+			<a href="#">About</a>
+			<a href="#">Log-in</a>
+		</nav>
