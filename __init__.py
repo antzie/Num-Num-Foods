@@ -24,7 +24,9 @@ import requests
 app = Flask(__name__)
 
 # Database Connection and Session
-engine = create_engine('postgresql://catalog:password@localhost/catalog?check_same_thread=False',
+#engine = create_engine('postgresql://catalog:password@localhost/catalog?check_same_thread=False',
+#                       poolclass=SingletonThreadPool)
+engine = create_engine('sqlite:///grocerwithusers.db?check_same_thread=False',
                        poolclass=SingletonThreadPool)
 Base.metadata.bind = engine
 DBSession = sessionmaker(bind=engine)
@@ -242,17 +244,17 @@ def about():
 
 @app.route('/')
 @app.route('/main_page/')
+
 def mainPage():
-    '''Returns the main page.
-    '''
+    '''Returns the main page.'''
     categories = session.query(FoodCategory).order_by('name').all()
 
     # Check to see if user is logged in
     if 'username' not in login_session:
-        return render_template('main_page_public.html', categories=categories)
+        return render_template('main_page-rev.html', categories=categories)
 
     categories = session.query(FoodCategory).order_by('name').all()
-    return render_template('main_page.html', categories=categories)
+    return render_template('main_page-rev.html', categories=categories)
 
 
 # New Food Category
@@ -543,4 +545,5 @@ def getUserID(email):
 if __name__ == '__main__':
     app.secret_key = 'super_secret_key'
     app.debug = True
-    app.run(host='3.104.111.195’, port=80)
+    #app.run(host='3.104.111.195', port=80)
+    app.run(host='0.0.0.0', port=8000)

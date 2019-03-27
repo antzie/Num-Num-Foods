@@ -1,0 +1,177 @@
+* {
+	padding: 0;
+	margin: 0;
+	/*color: white;*/
+	font-family: 'Alegreya Sans SC', sans-serif;
+	font-weight: 400;
+}
+
+p {
+	font-family: 'Lato', sans-serif;
+}
+header {
+	width: 100%;
+	min-height: 50px;
+	/*background-color: black;*/
+	background-color: #21520d;
+
+	color: white;
+
+	display: flex;
+	justify-content: space-between;
+
+	border-top: 2px solid white;
+}
+
+.header-title {
+  padding: 15px;
+  align-self: center;
+  width: 200px;
+  font-style: oblique;
+}
+
+.header-nav {
+	padding: 15px 0;
+	vertical-align: text-bottom;
+	align-self: center;
+}
+
+.header-nav a {
+	font-size: 1.2em;
+	text-decoration: none;
+	color: #ffffff;
+	padding: 5px 15px 0;
+}
+/***********************************/
+/* Responsive Top-Nav Bar (only appears at low dimensions)*/
+.nav-responsive {
+	display: flex;
+	justify-content: space-between;
+	background-color: #21520d; /* Darkest Green*/
+	border-top: 0.5px solid white;
+	border-bottom: 0.5px solid black;
+}
+.nav-responsive a {
+	font-size: 1em;
+	text-decoration: none;
+	color: #ffffff;
+	padding: 5px 15px;
+}
+
+/**********************************/
+/*Main Content Styling*/
+.content {
+	/*max-width: 1000px;*/
+	display: flex;
+	justify-content: space-between;
+	margin-top: 10px;
+}
+
+.content-main-container{
+	margin: 0 auto;
+}
+
+.content-main {
+	margin: 0 10px 10px 10px;
+	display: inline-block;
+}
+
+img {
+	width: 100%; 
+	/*max-height: 200px;*/
+}
+
+.heading-category {
+	width: 100%;
+	height: auto;
+	background-color: #21520d; 
+	padding: 15px 0;
+	color: #ffffff;
+	text-align: center;
+}
+
+.description-lists {
+	background-color: rgba(243, 255, 239, 0.41);
+	border: 2px solid rgb(200, 255, 181);
+}
+.description {
+	border-bottom: 2px solid #21520d;
+	margin: 5px;
+	padding-bottom: 3px;
+	color: black;
+}
+
+.heading-description {
+	font-weight: 800;
+}
+.heading-description, .description-item p {
+	padding: 2% 0 2% 4%;
+	margin: 0;
+	font-style: bold;
+
+}
+
+.description-item p {
+	font-size: 1em;
+}
+
+
+/* Side Bar (content-side) Styling */
+.content-side {
+	width: 250px;
+	background-color: #4ba625; /* Light Green */
+	margin-bottom: 15px;
+	margin-left: 10px;
+	transition-property: margin-left;
+	transition-duration: 1s;
+}
+.content-side-title {
+	background-color: #21520d;  /* Dark Forest Green*/
+	padding: 15px;
+    align-self: center;
+    border-radius: 2px;
+    color: #ffffff;
+    font-style: ;
+}
+
+.content-side ul {
+  list-style-type: none;
+  margin: 0;
+  color: #ffffff;
+  font-size: 1.1em;
+
+}
+
+.content-side-list li {
+  border-bottom: 1px solid rgba(250, 250, 250, 0.8);
+  padding: 15px; /* Padding for fat fingers at low screen size*/
+}
+
+.content-side-list li:hover {
+  background-color: #347718; /*Dark Green*/
+  border-radius: 2px;
+}
+
+footer {
+	width: 100%;
+	height: 25px;
+	background-color: #21520d;
+	color: white;
+}
+footer p {
+	text-align: center;
+	vertical-align: center;
+}
+
+/************** Breakpoints *****************/
+
+@media only screen and (max-width: 510px) {
+	.nav-anchor {
+		display: none;
+	}
+}
+@media only screen and (min-width: 511px) {
+	.nav-responsive {
+		display: none;
+	}
+}

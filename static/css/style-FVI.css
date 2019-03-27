@@ -1,0 +1,217 @@
+/* Styling for Food on the Fault Map */
+/*Validated 14-01-2019 */
+
+
+* {
+  padding: 0;
+  margin: 0;
+}
+/********** Main Containers' Styling *****************/
+html,
+body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-flow: column;
+  font-family: "Staatliches", sans-serif;
+  font-weight: 400;
+}
+
+.container {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+  width: 100%;
+}
+
+header {
+  flex: 0 1 auto;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(28, 34, 37); /*Dark Grey*/
+}
+
+.main-content {
+  flex: 1 1 auto;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.side-list {
+  margin-left: 0;
+  padding: 0 15px;
+  background-color: rgb(28, 34, 37);
+  color: rgba(250, 250, 250, 0.7);
+  flex: 0 0 200px; /* Don't grow, don't shrink, start at 300px*/
+  opacity: 1;
+  z-index: 2;
+  transition-property: margin-left;
+  transition-duration: .35s;
+}
+
+.map-content {
+  flex: 1;
+  z-index: 0;
+}
+
+/******** Fiddling Around the edges  ************/
+
+/***** Logo Styling *******/
+.logo {
+  padding: 15px;
+  background-color: rgb(35, 138, 150); /*teal*/
+  display: inline-block; /*Fit to content*/
+  border-radius: 0 3px 0 0;
+  width: 200px;
+  font-family: "Staatliches";
+  margin-left: 0;
+}
+.logo-inner {
+  border: 2px solid rgb(28, 34, 37);
+  padding: 0;
+}
+.logo h1 {
+  letter-spacing: 0.5px;
+  color: rgb(28, 34, 37);
+  text-align: center;
+  padding: 3px;
+  font-size: 1.3em;
+}
+
+/***** Hamburger Menu Icon ******/
+.toggleIcon {
+  font-size: 1.2em;
+  text-decoration: none;
+  padding: 18px 10px;
+  color: rgba(250, 250, 250, 0.7);
+  min-width: 100px;
+  cursor: pointer;
+}
+.toggleIcon:hover {
+  color: rgb(35, 138, 150); /*teal*/
+}
+/******* Side-List **********/
+
+.select-div {
+  font-family: "Staatliches";
+  display: flex;
+  flex-flow: column;
+  border-bottom: 3px solid rgb(35, 138, 150); /*teal*/
+  padding: 12px 0 12px 0;
+}
+
+.select-div h2 {
+  color: rgba(250, 250, 250, 0.7);
+  font-size: 1em;
+  letter-spacing: 1.1px;
+  font-weight: 400;
+  margin: 0 0 5px;
+}
+
+select {
+  background: transparent;
+  font-size: 16px;
+  font-weight: 400;
+  color: #fff;
+  border-radius: 0;
+  font-family: "Staatliches";
+}
+
+select > option {
+  background: rgb(35, 138, 150);
+  color: black;
+}
+option {
+  font-family: "Staatliches";
+}
+
+/************************************/
+/* List Options */
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.side-list li {
+  border-bottom: 1px solid rgba(250, 250, 250, 0.8);
+  padding: 12px 0px 12px 1px; /* Padding for fat fingers at low screen size*/
+}
+
+.side-list li:hover {
+  background-color: rgb(35, 138, 150); /*teal*/
+  border-radius: 2px;
+}
+
+/**********************************************/
+/* Info Window Styling */
+#infoHeading {
+  font-size: 1em;
+  padding: 2px 0;
+  border-bottom: 1px dotted rgb(35, 138, 150); /*teal*/
+  ;
+}
+#info-content li {
+  font-size: 1em;
+  padding-bottom: 2px;
+}
+
+#info-content p {
+  font-size: 0.7em;
+  padding-top: 2px;
+  border-top: 1px dotted rgb(35, 138, 150); /*teal*/
+}
+/*********************************************/
+/* Map Error Stying*/
+
+.map-error {
+  position: relative;
+  top: 50%;
+  left: 30%;
+  display: flex;
+  flex-wrap: wrap;
+  width: 70%;
+}
+
+/************** Breakpoints *****************/
+
+@media only screen and (min-width: 421px) and (max-width: 600px) {
+  .side-list {
+    flex: 0 0 150px; /* Don't grow, don't shrink, start at 300px*/
+  }
+  .logo {
+    width: 150px;
+  }
+
+  .logo h1 {
+    letter-spacing: 0.5px;
+    font-size: 1.2em;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .side-list {
+    flex: 0 0 136px; /* Don't grow, don't shrink, start at 300px*/
+  }
+  .logo {
+    width: 136px;
+  }
+
+  .logo h1 {
+    letter-spacing: 0.5px;
+    font-size: 1em;
+  }
+  .toggleIcon {
+    font-size: 1em;
+  }
+  ul,
+  h2 {
+    font-size: 0.8em;
+  }
+
+  .map-error {
+    top: 30%;
+    left: 20%;
+  }
+}
