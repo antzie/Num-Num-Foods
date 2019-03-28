@@ -14,7 +14,7 @@ header {
 	width: 100%;
 	min-height: 50px;
 	/*background-color: black;*/
-	background-color: #21520d;
+	background-color: #264E36;
 
 	color: white;
 
@@ -142,7 +142,7 @@ img {
 	transition-duration: 1s;
 }
 .content-side-title {
-	background-color: #21520d;  /* Dark Forest Green*/
+	background-color: #264E36;  /* Dark Forest Green*/
 	padding: 15px;
     align-self: center;
     border-radius: 2px;
@@ -154,13 +154,12 @@ img {
 .content-side ul {
   list-style-type: none;
   margin: 0;
-  color: #ffffff;
   font-size: 1.1em;
 
 }
 
 .content-side-list li {
-  border-bottom: 1px dotted #ffffff;
+  border-bottom: 1px solid #21520d;  /* Dark Forest Green*/
   padding: 15px; /* Padding for fat fingers at low screen size*/
 }
 
@@ -171,10 +170,11 @@ img {
 
 .links {
 	text-decoration: none;
-	font-size: 1.1em;
+	font-size: 1.2em;
 	white-space: nowrap;
-	color: #ffffff;
-	font-size: 600;
+	color: #183c09 /* Very Dark Forest Green*/
+
+
 }
 
 footer {
