@@ -76,7 +76,7 @@ header {
 .content-main {
 	margin: 0 10px 10px 10px;
 	display: inline-block;
-	background-color: rgba(243, 255, 239, 0.41);
+	/*background-color: rgba(243, 255, 239, 0.41);*/ /*Don't like the pale green background.*/
 	height: fill-available;          /* WebKit-based browsers will ignore this. */
     height: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
     height: fill-available
@@ -118,31 +118,28 @@ img {
 	line-height: 1.3em;
 }
 
-/*.description-lists {
-	background-color: rgba(243, 255, 239, 0.41);
-	border: 2px solid rgb(200, 255, 181);
+
+/****** Category Styling *********/
+.description-lists {
+	/*background-color: rgba(243, 255, 239, 0.41);*/
+	/*border: 2px solid rgb(200, 255, 181);*/
 }
-.description {
-	border-bottom: 2px solid #21520d;
+.description-container {
+	border-bottom: 1px solid #4ba625;; /*Yellow Green*/
 	margin: 5px;
 	padding-bottom: 3px;
 	color: black;
 }
 
 .heading-description {
-	font-weight: 800;
-}
-.heading-description, .description-item p {
-	padding: 2% 0 2% 4%;
-	margin: 0;
-	font-style: bold;
-
+	font-weight: 600;
+	padding: 10px 0;
 }
 
-.description-item p {
-	font-size: 1em;
+.description-item, .description-price {
+	line-height: 1.1em;
+	padding: 5px 0;
 }
-*/
 
 /* Side Bar (content-side) Styling */
 .content-side {
