@@ -1,7 +1,6 @@
 * {
 	padding: 0;
 	margin: 0;
-	/*color: white;*/
 	font-family: 'Alegreya Sans SC', sans-serif;
 	font-weight: 400;
 }
@@ -13,14 +12,10 @@ p {
 header {
 	width: 100%;
 	min-height: 50px;
-	/*background-color: black;*/
-	background-color: #264E36;
-
-	color: white;
-
+	background-color: #21520d; 
+	color: #ffffff;
 	display: flex;
 	justify-content: space-between;
-
 	border-top: 2px solid white;
 }
 
@@ -43,6 +38,10 @@ header {
 	color: #ffffff;
 	padding: 5px 15px 0;
 }
+
+.header-nav a:hover{
+	color: #bfe2b0; /*Almost White */
+}
 /***********************************/
 /* Responsive Top-Nav Bar (only appears at low dimensions)*/
 .nav-responsive {
@@ -62,11 +61,10 @@ header {
 /**********************************/
 /*Main Content Styling*/
 .content {
-	/*max-width: 1000px;*/
 	display: flex;
 	justify-content: space-between;
 	margin-top: 10px;
-	min-height: 500px;
+	min-height: 600px;
 }
 
 .content-main-container{
@@ -76,19 +74,13 @@ header {
 .content-main {
 	margin: 0 10px 10px 10px;
 	display: inline-block;
-	/*background-color: rgba(243, 255, 239, 0.41);*/ /*Don't like the pale green background.*/
-	/*height: fill-available;     */     /* WebKit-based browsers will ignore this. */
-    /*height: -webkit-fill-available; */ /* Mozilla-based browsers will ignore this. */
-    /*height: fill-available*/
 }
 
 img {
 	width: 100%; 
-	/*max-height: 200px;*/
 }
 
 .section-welcome {
-	/*background-color: rgba(243, 255, 239, 0.41);*/
 	border-bottom: 2px solid #21520d;
 	text-align: center;
 }
@@ -122,6 +114,10 @@ img {
 	color: black;
 }
 
+.description-container:last-of-type {
+	margin-bottom: 0; /* Match line with side menu*/
+}
+
 .heading-description {
 	font-weight: 600;
 	padding: 10px 0;
@@ -135,14 +131,15 @@ img {
 /***************** Side Bar (content-side) Styling *******************/
 .content-side {
 	width: 250px;
-	background-color: #4ba625; /* Light Green */
+	background-color: #2d6d12; /* A lighter dark green */
+	/*background-color: #4ba625; /* Light Green */
 	margin-bottom: 10px;
 	margin-left: 10px;
 	transition-property: margin-left;
 	transition-duration: 1s;
 }
 .content-side-title {
-	background-color: #264E36;  /* Dark Forest Green*/
+	background-color: #21520d;   /* Dark Forest Green*/
 	padding: 15px;
     align-self: center;
     border-radius: 2px;
@@ -164,17 +161,23 @@ img {
 }
 
 .content-side-list li:hover {
-  background-color: #347718; /*Dark Green*/
+  /*background-color: #347718;*/ /*Dark Green*/
+  background-color: #4ba625; /*Ligher Dark Green*/
   border-radius: 2px;
+  color: #21520d; /*Dark Forest Green*/
+/
 }
 
 .links {
 	text-decoration: none;
 	font-size: 1.2em;
 	white-space: nowrap;
-	color: #183c09 /* Very Dark Forest Green*/
-
-
+	/*color: #183c09;*/ /* Very Dark Forest Green*/
+	color: #ffffff;
+	color: #bfe2b0; /* Almost white */
+}
+.links:hover {
+  color: #21520d; /*Dark Forest Green*/
 }
 
 footer {
