@@ -77,25 +77,16 @@ header {
 	margin: 0 10px 10px 10px;
 	display: inline-block;
 	/*background-color: rgba(243, 255, 239, 0.41);*/ /*Don't like the pale green background.*/
-	height: fill-available;          /* WebKit-based browsers will ignore this. */
-    height: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
-    height: fill-available
+	/*height: fill-available;     */     /* WebKit-based browsers will ignore this. */
+    /*height: -webkit-fill-available; */ /* Mozilla-based browsers will ignore this. */
+    /*height: fill-available*/
 }
 
 img {
 	width: 100%; 
 	/*max-height: 200px;*/
 }
-/*
-.heading-category {
-	width: 100%;
-	height: auto;
-	background-color: #21520d; 
-	padding: 15px 0;
-	color: #ffffff;
-	text-align: center;
-}
-*/
+
 .section-welcome {
 	/*background-color: rgba(243, 255, 239, 0.41);*/
 	border-bottom: 2px solid #21520d;
@@ -141,11 +132,11 @@ img {
 	padding: 5px 0;
 }
 
-/* Side Bar (content-side) Styling */
+/***************** Side Bar (content-side) Styling *******************/
 .content-side {
 	width: 250px;
 	background-color: #4ba625; /* Light Green */
-	margin-bottom: 15px;
+	margin-bottom: 10px;
 	margin-left: 10px;
 	transition-property: margin-left;
 	transition-duration: 1s;
@@ -156,7 +147,8 @@ img {
     align-self: center;
     border-radius: 2px;
     color: #ffffff;
-    font-style: ;
+    border-radius: 2px;
+
 }
 
 .content-side ul {
@@ -168,13 +160,21 @@ img {
 }
 
 .content-side-list li {
-  border-bottom: 1px solid rgba(250, 250, 250, 0.8);
+  border-bottom: 1px dotted #ffffff;
   padding: 15px; /* Padding for fat fingers at low screen size*/
 }
 
 .content-side-list li:hover {
   background-color: #347718; /*Dark Green*/
   border-radius: 2px;
+}
+
+.links {
+	text-decoration: none;
+	font-size: 1.1em;
+	white-space: nowrap;
+	color: #ffffff;
+	font-size: 600;
 }
 
 footer {
