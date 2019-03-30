@@ -245,7 +245,10 @@ def foodItemJSON(category_id, food_id):
 def about():
     '''Returns About page.
     '''
-    return render_template('about.html')
+    # categories is required for side-menu
+    categories = session.query(FoodCategory).order_by('name').all()
+
+    return render_template('about-rev.html', categories=categories)
 
 
 # Food Category

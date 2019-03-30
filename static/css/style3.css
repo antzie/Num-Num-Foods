@@ -39,7 +39,7 @@ header {
 	padding: 5px 15px 0;
 }
 
-.header-nav a:hover{
+.header-nav a:hover, .nav-responsive a:hover {
 	color: #bfe2b0; /*Almost White */
 }
 /***********************************/
@@ -89,7 +89,6 @@ img {
 	border-top: 3px solid #21520d;
     border-bottom: 2px solid #21520d;
     padding: 15px 2px;
-    font-weight: 600;
     color: #21520d;
     background-color: inherit;
     text-align:center;
@@ -97,8 +96,8 @@ img {
 
 .section-welcome p {
 	font-family: 'Merriweather', serif;
-	padding: 10px 2px;
-	line-height: 1.3em;
+	padding: 5px 0;
+	line-height: 1.2em;
 }
 
 
@@ -106,6 +105,7 @@ img {
 .description-lists {
 	/*background-color: rgba(243, 255, 239, 0.41);*/
 	/*border: 2px solid rgb(200, 255, 181);*/
+	max-width: 865px;
 }
 .description-container {
 	border-bottom: 1px solid #4ba625;; /*Yellow Green*/
@@ -124,8 +124,9 @@ img {
 }
 
 .description-item, .description-price {
-	line-height: 1.1em;
+	line-height: 1.2em;
 	padding: 5px 0;
+	font-family: 'Merriweather', serif;
 }
 
 /***************** Side Bar (content-side) Styling *******************/
