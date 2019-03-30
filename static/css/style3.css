@@ -105,12 +105,11 @@ img {
 .description-lists {
 	/*background-color: rgba(243, 255, 239, 0.41);*/
 	/*border: 2px solid rgb(200, 255, 181);*/
-	max-width: 865px;
+	/*max-width: 865px;*/
 }
 .description-container {
 	border-bottom: 1px solid #4ba625;; /*Yellow Green*/
-	margin: 5px;
-	padding-bottom: 3px;
+	padding: 0 5px 5px 5px;
 	color: black;
 }
 
