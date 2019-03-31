@@ -19,6 +19,11 @@ header {
 	border-top: 2px solid white;
 }
 
+.centre-text {
+	text-align: center;
+}
+
+
 .header-title {
   padding: 15px;
   align-self: center;
@@ -80,11 +85,6 @@ img {
 	width: 100%; 
 }
 
-.section-welcome {
-	border-bottom: 2px solid #21520d;
-	text-align: center;
-}
-
 .heading-non-coloured {
 	border-top: 3px solid #21520d;
     border-bottom: 2px solid #21520d;
@@ -94,11 +94,7 @@ img {
     text-align:center;
 }
 
-.section-welcome p {
-	font-family: 'Merriweather', serif;
-	padding: 5px 0;
-	line-height: 1.2em;
-}
+
 
 
 /****** Category Styling *********/
@@ -208,4 +204,16 @@ footer p {
 	.nav-responsive {
 		display: none;
 	}
+}
+/**** Possibly unnecessary */
+.section-welcome {
+	border-bottom: 2px solid #21520d;
+	text-align: center;
+}
+
+
+.section-welcome p {
+	font-family: 'Merriweather', serif;
+	padding: 5px 0;
+	line-height: 1.2em;
 }
