@@ -151,7 +151,6 @@ img {
   list-style-type: none;
   margin: 0;
   font-size: 1.1em;
-
 }
 
 .content-side-list li {
@@ -159,12 +158,8 @@ img {
   padding: 15px; /* Padding for fat fingers at low screen size*/
 }
 
-.content-side-list li:hover {
-  /*background-color: #347718;*/ /*Dark Green*/
-  background-color: #4ba625; /*Ligher Dark Green*/
-  border-radius: 2px;
-  color: #21520d; /*Dark Forest Green*/
-/
+.content-side-list a {
+  text-decoration: none;
 }
 
 .links {
@@ -175,9 +170,14 @@ img {
 	color: #ffffff;
 	color: #bfe2b0; /* Almost white */
 }
+
 .links:hover {
   color: #21520d; /*Dark Forest Green*/
+  background-color: #4ba625; /*Ligher Dark Green*/
 }
+
+
+
 
 footer {
 	width: 100%;
