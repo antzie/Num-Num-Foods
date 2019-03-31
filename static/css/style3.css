@@ -109,7 +109,7 @@ img {
 }
 .description-container {
 	border-bottom: 1px solid #4ba625;; /*Yellow Green*/
-	padding: 0 5px 5px 5px;
+	/*padding: 0 5px 5px 5px;*/
 	color: black;
 }
 
@@ -126,7 +126,10 @@ img {
 	line-height: 1.2em;
 	padding: 5px 0;
 	font-family: 'Merriweather', serif;
+	max-width: 740px;
 }
+
+
 
 /***************** Side Bar (content-side) Styling *******************/
 .content-side {
