@@ -24,7 +24,8 @@ session.commit()
 
 # Foods for Category 'Vegetables'
 foodcategory1 = FoodCategory(name="Vegetables",
-                             user_id=1)
+                            image = "https://raw.githubusercontent.com/antzie/Calla-Grocer-Catalogue/master/static/css/cherry-tomatoes-header.jpg",
+                            user_id=1)
 
 session.add(foodcategory1)
 session.commit()
@@ -68,6 +69,7 @@ print 'Catgory1: Vegetables successfully populated'
 
 # Foods for Category 'Chocolate'
 foodcategory2 = FoodCategory(name="Chocolate",
+                             image = "https://raw.githubusercontent.com/antzie/Calla-Grocer-Catalogue/master/static/css/delicious-chocolate-header.jpg",
                              user_id=1)
 
 session.add(foodcategory2)
@@ -114,6 +116,7 @@ print 'Catgory2: Chocolate successfully populated'
 # Foods for Category 'Dairy'
 
 foodcategory3 = FoodCategory(name="Dairy Products",
+                             image = "https://raw.githubusercontent.com/antzie/Calla-Grocer-Catalogue/master/static/css/decorative-cup-of-tea-with-pink-roses-website-header.jpg",
                              user_id=1)
 
 session.add(foodcategory3)

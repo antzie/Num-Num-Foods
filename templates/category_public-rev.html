@@ -5,7 +5,9 @@
 	{% include "side-menu-rev.html" %}
 	<div class="content-main-container">
 		<section class="content-main">
-			<img id="main-img" src="/static/images/chocolate-cake-with-berry-header.jpg" alt="An out of focus picture of the rasberries atop a Chocolate Cake.">
+			<picture>
+				<img id="main-img" src={{category.image}} alt="An out of focus picture of the rasberries atop a Chocolate Cake.">
+			</picture>
 			<h2 class="heading-non-coloured">{{category.name}}</h2>
 			<div class="description-lists">
 				{% for fooditem in food %}

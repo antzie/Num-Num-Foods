@@ -383,7 +383,7 @@ def showCategoryFood(category_id):
     category = session.query(FoodCategory).filter_by(id=category_id).one()
     other_categories = session.query(FoodCategory).filter(
         FoodCategory.id != category_id).all()
-    food = session.query(FoodItem).filter_by(foodcategory_id=category_id).all()  
+    food = session.query(FoodItem).filter_by(foodcategory_id=category_id).all()
     # Owner of Category
     owner = getUserInfo(category.user_id)
 
