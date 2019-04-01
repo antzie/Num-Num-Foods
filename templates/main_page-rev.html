@@ -15,7 +15,11 @@
 	</div>
 	<div class="content-main-container">
 		<section class="content-main">
-			<img id="main-img" src="/static/images/fresh-strawberry-header.jpg" alt="An out of focus picture of the rasberries atop a Chocolate Cake.">
+			<picture>
+				<source media="(min-width: 650px)" srcset="/static/images/tea-1040653_1280.jpg">
+				<source media="(min-width: 465px)" srcset="img_white_flower.jpg">
+				<img src="/static/images/tea-1040653_1280.jpg"alt="An out of focus picture of the rasberries atop a Chocolate Cake.">
+			</picture>
 		<h2 class="heading-non-coloured"> Welcome to Calla </h2>
 			<div class="description-lists">
 				<section class="description-container">
@@ -31,6 +35,9 @@
 {% endblock %}
 
 <!-- 
+
+	tea-1040653_1280
+	fresh-strawberry-header
 		<section class="content-main">
 			<img id="main-img" src="/static/images/chocolate-cake-with-berry-header.jpg" alt="An out of focus picture of the rasberries atop a Chocolate Cake.">
 			<h2 class="heading-non-coloured"> Welcome to Calla </h2>
