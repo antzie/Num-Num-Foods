@@ -169,6 +169,8 @@ header {
 	margin-left: 10px;
 	transition-property: margin-left;
 	transition-duration: 1s;
+	min-width: 180px;
+	max-width: 180px;
 }
 .content-side-title {
 	background-color: #21520d;   /* Dark Forest Green*/
@@ -189,6 +191,7 @@ header {
 .content-side-list li {
   border-bottom: 1px solid #21520d;  /* Dark Forest Green*/
   padding: 15px; /* Padding for fat fingers at low screen size*/
+  background-color: #377d19; /*A slightly lighter green than the rest of the menu*/
 }
 
 .content-side-list a {
