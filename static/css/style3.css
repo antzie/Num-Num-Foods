@@ -38,6 +38,10 @@ header {
 	display: flex;
 	justify-content: space-between;
 	border-top: 2px solid white;
+	
+background: -webkit-linear-gradient(67deg, rgb(33, 82, 13), rgb(254, 128, 0));
+background: linear-gradient(67deg, rgb(33, 82, 13), rgb(254, 128, 0));
+
 }
 
 .centre-text {
@@ -218,15 +222,20 @@ footer p {
 
 /************** Breakpoints *****************/
 
-@media only screen and (max-width: 510px) {
+@media only screen and (max-width: 560px) {
 	.nav-anchor {
 		display: none;
 	}
 	.content {
 		min-height: 300px;
 	}
+
+	.content-side {
+		max-width: 200px;
+		min-width: auto;
+	}
 }
-@media only screen and (min-width: 511px) {
+@media only screen and (min-width: 561px) {
 	.nav-responsive {
 		display: none;
 	}
