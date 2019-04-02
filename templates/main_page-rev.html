@@ -2,28 +2,18 @@
 {% block content %}
 {% include "header-rev.html" %}
 <section class="content">
-	<!-- To change to side-menu.html later -->
-	<div class="content-side" id="menu-side">
-		<div class="content-side-title">
-			<h2>Catalogue</h2>
-		</div>
-		<ul class="content-side-list">
-			{% for category in categories %}
-				<li><a class="links links_category" href="{{url_for('showCategoryFood', category_id=category.id)}}">{{category.name}}</a></li>
-			{% endfor %}
-		</ul>
-	</div>
+{% include "side-menu-rev.html" %}
 	<div class="content-main-container">
 		<section class="content-main">
 			<picture>
 				<img class="img-header" src="https://raw.githubusercontent.com/antzie/Calla-Grocer-Catalogue/master/static/css/chocolate-cake-with-berry-header.jpg" alt="An out of focus picture of the rasberries atop a Chocolate Cake.">
 			</picture>
-		<h2 class="heading-non-coloured"> Welcome to Calla </h2>
+		<h2 class="heading-non-coloured"> Welcome to Num Num Foods </h2>
 			<div class="description-lists">
 				<section class="description-container">
-					<h3 class="heading-description centre-text">Calla - an Item Catalogue Template</h3>
-					<p class="description-item centre-text"> Calla is an in-progress template for an item catalogue website; specifically for a non-existent small grocer store.</p>
-					<p class="description-price centre-text"> Have a browse through Calla's virtual stock.</p>
+					<h3 class="heading-description centre-text">Num Num - an Item Catalogue Template</h3>
+					<p class="description-item centre-text"> Num Num is an in-progress template for an item catalogue website; specifically for a non-existent small grocer store.</p>
+					<p class="description-price centre-text"> Have a browse through Num Num's virtual stock.</p>
 				</section>
 			</div>
 		</section>

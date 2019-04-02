@@ -1,8 +1,6 @@
 * {
 	padding: 0;
 	margin: 0;
-	font-family: 'Alegreya Sans SC', sans-serif;
-	font-weight: 400;
 }
 
 p {
@@ -18,32 +16,21 @@ picture {
 	max-width: 1024px;
 	max-height: 300px;
 }
-/*
-.img-header {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-}
-*/
+
 img {
 	width: 100%; 
 	height: 100%;
 }
 
-/*
-.background-image {
-	max-width: 1024px;
-	max-height: 300px;
-	background-image: url("https://raw.githubusercontent.com/antzie/Calla-Grocer-Catalogue/master/static/css/chocolate-cake-with-berry-header.jpg");
-	min-height: 150px;
+h1 {
+  font-family: 'Alegreya Sans SC', sans-serif;
+  font-weight: 300;
+  font-style: italic;
 }
-*/
-
-
-
-
 
 header {
+	font-family: 'Alegreya Sans SC', sans-serif;
+	font-weight: 400;
 	width: 100%;
 	min-height: 50px;
 	background-color: #21520d; 
@@ -61,9 +48,10 @@ header {
 .header-title {
   padding: 15px;
   align-self: center;
-  width: 200px;
-  font-style: oblique;
+  width: 250px;
+  word-wrap: nowrap;
 }
+
 
 .header-nav {
 	padding: 15px 0;
@@ -162,9 +150,7 @@ header {
 
 /***************** Side Bar (content-side) Styling *******************/
 .content-side {
-	width: 250px;
 	background-color: #2d6d12; /* A lighter dark green */
-	/*background-color: #4ba625; /* Light Green */
 	margin-bottom: 10px;
 	margin-left: 10px;
 	transition-property: margin-left;
@@ -179,41 +165,45 @@ header {
     border-radius: 2px;
     color: #ffffff;
     border-radius: 2px;
-
+}
+.content-side-title h2 {
+	font-family: 'Alegreya Sans SC', sans-serif;
+	font-weight: 400;
+	font-size: 1.4em;
 }
 
 .content-side ul {
   list-style-type: none;
   margin: 0;
-  font-size: 1.1em;
+
 }
 
 .content-side-list li {
   border-bottom: 1px solid #21520d;  /* Dark Forest Green*/
   padding: 15px; /* Padding for fat fingers at low screen size*/
   background-color: #377d19; /*A slightly lighter green than the rest of the menu*/
+  border-radius: 3px;
 }
 
+.content-side-list li:hover {
+	background-color: #4ba625; /*Ligher Dark Green*/
+	color: #21520d; /*Dark Forest Green*/
+}
 .content-side-list a {
-  text-decoration: none;
+	text-decoration: none;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+	font-size: 1em;
+
 }
 
 .links {
 	text-decoration: none;
-	font-size: 1.2em;
+	/*font-size: 1.2em;*/
 	white-space: nowrap;
-	/*color: #183c09;*/ /* Very Dark Forest Green*/
 	color: #ffffff;
-	color: #bfe2b0; /* Almost white */
+
 }
-
-.links:hover {
-  color: #21520d; /*Dark Forest Green*/
-  background-color: #4ba625; /*Ligher Dark Green*/
-}
-
-
-
 
 footer {
 	width: 100%;
