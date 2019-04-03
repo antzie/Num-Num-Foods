@@ -61,6 +61,6 @@ for category in session.query(FoodCategory).filter_by(name='Dairy Products').all
   print category.name
   print category.image
   # The below line updates the DB. 
-  category.image = 'https://github.com/antzie/Calla-Grocer-Catalogue/blob/master/static/css/dairy_products.jpg?raw=true'
+  category.image = "https://raw.githubusercontent.com/antzie/Calla-Grocer-Catalogue/master/static/css/dairy_products.jpg"
 # This line commits changes to the DB
 #session.commit()

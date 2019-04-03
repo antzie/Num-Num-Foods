@@ -38,10 +38,24 @@ header {
 	display: flex;
 	justify-content: space-between;
 	border-top: 2px solid white;
-	
+
 background: -webkit-linear-gradient(67deg, rgb(33, 82, 13), rgb(254, 128, 0));
 background: linear-gradient(67deg, rgb(33, 82, 13), rgb(254, 128, 0));
 
+background: -webkit-linear-gradient(94deg, rgb(33, 82, 13), rgb(255, 11, 13));
+background: linear-gradient(94deg, rgb(33, 82, 13), rgb(255, 11, 13));
+
+
+background: -webkit-linear-gradient(94deg, rgb(33, 82, 13), rgb(254, 216, 43));
+background: linear-gradient(94deg, rgb(33, 82, 13), rgb(254, 216, 43));
+
+
+
+background: -webkit-linear-gradient(-20deg, rgb(142, 20, 0), rgb(33, 82, 13));
+background: linear-gradient(-20deg, rgb(142, 20, 0), rgb(33, 82, 13));
+
+background: linear-gradient(to right, #21520d, #4ba625, #f53300); /*Dark Green Pale Green Cheerful Red*/
+background: linear-gradient(to right, #21520d, #4ba625, #900f00); /*Dark Green Pale Green Cheerful Red*/
 }
 
 .centre-text {
@@ -161,19 +175,26 @@ background: linear-gradient(67deg, rgb(33, 82, 13), rgb(254, 128, 0));
 	transition-duration: 1s;
 	min-width: 180px;
 	max-width: 180px;
+	border-radius: 1px;
+
+
+background: linear-gradient(#21520d, #4ba625, #21520d ); /*Dark Green Pale Green Cheerful Red*/
+
 }
 .content-side-title {
-	background-color: #21520d;   /* Dark Forest Green*/
+	/*background-color: #21520d;   /* Dark Forest Green*/
 	padding: 15px;
     align-self: center;
     border-radius: 2px;
     color: #ffffff;
     border-radius: 2px;
+    border-bottom: 2px solid #ffffff;
 }
+
 .content-side-title h2 {
 	font-family: 'Alegreya Sans SC', sans-serif;
 	font-weight: 400;
-	font-size: 1.4em;
+	font-size: 1.6em;
 }
 
 .content-side ul {
@@ -185,7 +206,7 @@ background: linear-gradient(67deg, rgb(33, 82, 13), rgb(254, 128, 0));
 .content-side-list li {
   border-bottom: 1px solid #21520d;  /* Dark Forest Green*/
   padding: 15px; /* Padding for fat fingers at low screen size*/
-  background-color: #377d19; /*A slightly lighter green than the rest of the menu*/
+  /*background-color: #377d19; /*A slightly lighter green than the rest of the menu*/
   border-radius: 3px;
 }
 
