@@ -34,9 +34,9 @@ session = DBSession()
 
 # Client Info and Application Name.
 CLIENT_ID = json.loads(
-    open('client_secret.json', 'r').read())['web']['client_id']
-APPLICATION_NAME = "Grocer Catalogue"
-
+    open('client_secret_num.json', 'r').read())['web']['client_id']
+APPLICATION_NAME = "Num- Num Foods"
+print "meow?"
 
 #######################################################################
 # Log-in/User Authorisation Section
@@ -50,16 +50,19 @@ def log_in():
     state = ''.join(random.choice(string.ascii_uppercase + string.digits)
                     for x in xrange(32))
     login_session['state'] = state
+    print "meeeeo meeuuuuu meebop"
     return render_template('login.html', STATE=state, CLIENT_ID=CLIENT_ID)
 
 
-# Connect to Google and provide access token
 
+# Connect to Google and provide access token
+# Does not even get here. There is an error somewhere above
 @app.route('/gconnect', methods=['POST'])
 def gconnect():
     '''Connects to Google and acquires access_token.'''
 
     # Validate state token
+    print "hullo"
     if request.args.get('state') != login_session['state']:
         response = make_response(json.dumps('Invalid state parameter.'), 401)
         response.headers['Content-Type'] = 'application/json'
@@ -69,9 +72,9 @@ def gconnect():
 
     try:
         # Upgrade the authorization code into a credentials object
-        oauth_flow = flow_from_clientsecrets('client_secret.json', scope='')
+        oauth_flow = flow_from_clientsecrets('client_secret_num.json', scope='')
         oauth_flow.redirect_uri = 'postmessage'
-        credentials = oauth_flow.step2_exchange(code)
+        credentials = oauth_flow.step2_exchange(request.data)
 
         # check 'access_token is not already stored in login_session
         # (Fixes issue where login_session'access_token' was
@@ -89,8 +92,10 @@ def gconnect():
 
     # Check that the access token is valid.
     access_token = credentials.access_token
-    url = ('https://www.googleapis.com/oauth2/v1/tokeninfo?access_token=%s'
-           % access_token)
+    #url = ('https://www.googleapis.com/oauth2/v1/tokeninfo?access_token=%s'
+    #      % access_token)
+    url = ('https://oauth2.googleapis.com/token?access_token=%s' % access_token)
+    print 'hello world'
     h = httplib2.Http()
     result = json.loads(h.request(url, 'GET')[1])
 
@@ -247,7 +252,7 @@ def about():
     '''
     # categories is required for side-menu
     categories = session.query(FoodCategory).order_by('name').all()
-
+    print "meow meow meow2"
     return render_template('about-rev.html', categories=categories)
 
 

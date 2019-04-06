@@ -1,11 +1,107 @@
-{% extends "main.html" %}
-{% block content %}
-{% include "grocerheader.html" %}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Num Num Foods</title>
+		<link href="https://fonts.googleapis.com/css?family=Alegreya|Alegreya+Sans+SC:100,300i,400,400i|Open+Sans:300,300i,400,400i,600i,700" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="/static/css/style3.css">
+
+
+		<meta name="google-signin-client_id" content="{{CLIENT_ID.G}}">
+</head>
+<body>
+	{% include "header-rev.html" %}
+  <span class="g-signin2" data-onsuccess="onSuccess" data-onfailure="onFailure"></span>
+  <div>Warning: Entering a 30km Zone. This stretch of website is undergoing construction... </div>
+</body>
+  <script>
+    function onSuccess(googleUser) {
+      console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
+      console.log(googleUser.getBasicProfile().getGivenName());
+
+      console.log(googleUser)
+
+      console.log(googleUser.getAuthResponse())
+
+      /* Redirect to main page */
+      /*setTimeout(function() {
+              window.location.href = "/main_page";
+            }, 4000);*/
+
+
+
+
+       /* //$('#button_signin').attr('style', 'display:none');
+      if (authResult['code']) {
+        $.ajax({
+          type: 'POST',
+          url: '/gconnect?state={{STATE}}',
+          processData: false, 
+          contentType: 'application/octet-stream: charset=utf-8', 
+          data: authResult['code'],
+          success: function(result){
+            if (result){
+              //$('#result').html('<h3>Login sucessful</h3>' + result + '<p>Redirecting.... </p>')
+              setTimeout(function() {
+              window.location.href = "/main_page";
+            }, 4000);
+          } 
+            else if (authResult['error']) {
+              console.log('there was an error: ' + authResult['error']);
+            }
+            else {
+              //$('#result').html('Failed to make a server side call. Check your configuration and console. Do you have a relevant Client Id?')
+              console.log("something happened at final stage")
+            }
+          }
+        });
+
+      }*/
+    }
+
+    function onFailure(error) {
+      console.log(error);
+      console.log()
+    }
+    /*
+    function renderButton() {
+      gapi.signin2.render('my-signin2', {
+        'scope': 'profile email',
+        'width': 240,
+        'height': 50,
+        'longtitle': true,
+        'theme': 'dark',
+        'onsuccess': onSuccess,
+        'onfailure': onFailure
+      });
+    }*/
+  </script>
+  <a href="#" onclick="signOut();">Sign out</a>
+	<script>
+	function signOut() {
+		var auth2 = gapi.auth2.getAuthInstance();
+		auth2.signOut().then(function () {
+		  console.log('User signed out.');
+		});
+	}
+	</script>
+
+  <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
+
+	
+	<script src='/static/js/js-respons.js'></script>
+</html>
+
+<!--
 <section class="main_content">
 	<h3 class="header_maincontent">Log-In</h3>
 	<div class="div_list">
-	<!--Div to Contain the Sign in Button-->
+	Div to Contain the Sign in Button
 		<div id = "button_signin">
+			<span class = 'g-signin'></span>
+
 			<span class = 'g-signin'
 	            data-scope="openid email"
 	            data-clientid={{CLIENT_ID}}
@@ -15,7 +111,9 @@
 	            data-callback="signInCallback"
 	            data-approvalprompt="force">			
 			</span>
+
 		</div>
+		{{CLIENT_ID}}
 		<div id='result'></div>
 
 		<script>
@@ -49,4 +147,4 @@
 		</script>
 	</div>
 </section>
-{% endblock %}
+
